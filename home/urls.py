@@ -17,13 +17,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from home import views
+from hello.utils import convert_to_postfix, convert_to_prefix
+
 
 urlpatterns = [
     path('', views.home, name='home'),
     path('about', views.about, name='about'),
     path('contact', views.contact, name='contact'),
-    path('services', views.services, name='services')
+    path('services', views.services, name='services'),
+    # path('convert', views.convert_expression, name='convert'),
+    path('convert_expression/', views.convert_expression, name='convert_expression'),
 
 
-
+    
 ]
