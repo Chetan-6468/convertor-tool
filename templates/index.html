@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home -MineConvert</title>
+
+
+<!-- .................csss....................... -->
+<link rel="stylesheet" href="convertor.css">
+
+
+<style>
+  body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+  }
+
+  .paragraph1 {
+      text-align: center;
+      font-weight: bold;
+      font-size: 25px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     
+  }
+
+  .container {
+      max-width: 400px;
+      margin: 0 auto;
+  }
+
+  .form-group {
+      margin-bottom: 10px;
+  }
+
+  label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+  }
+
+  input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+  }
+
+  select {
+      width: 100%;
+      padding: 8px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+  }
+
+  button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+  }
+
+
+  .result {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #f0f0f0;
+      font-weight: bold;
+  }
+  .paragraph2{
+    text-align: center;
+    font-size: large;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+  }
+  .paragraph2:hover{
+    background-color: #3b9140;
+    
+  }
+  .footer{
+    background-color: rgb(80, 80, 80);
+    color: aliceblue;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+    <!-- ----------------------------navbar------------------------- -->
+    <section>
+      <div class="flex justify-center  ">
+                                            <nav class="self-center w-full max-w-7xl  ">
+                                                <div class="flex flex-col lg:flex-row justify-around items-center ">
+                                                    <h1 class="uppercase pl-5 py-4 text-lg font-sans font-bold">MineConvert</h1>
+                                                    <ul class="hidden lg:flex items-center text-[18px] font-semibold pl-32">
+                                                        <li class="hover:underline  underline-offset-4 decoration-2 decoration-white py-2 rounded-lg px-5">
+                                                            <a href="#">Home</a></li>
+                                                        <li class="hover:underline underline-offset-4 decoration-2 decoration-white py-2 rounded-lg px-5"><a
+                                                                href="/contact">Contact</a></li>
+                                                        <li class="hover:underline underline-offset-4 decoration-2 decoration-white py-2 rounded-lg px-5"><a
+                                                                href="/services">Services</a></li>
+                                                        <li class="hover:underline underline-offset-4 decoration-2 decoration-white py-2 rounded-lg px-5"><a
+                                                                href="/about">About</a></li>
+                                                        
+                                                    </ul>
+                                                    <div class=" text-center text-base pr-5  inline-flex"> <a href="#"
+                                                            class="w-8 h-8 inline-block rounded-full pt-[6px] hover:text-blue-500"><i
+                                                                class="fa fa-twitter"></i></a> <a href="#"
+                                                            class="w-8 h-8 inline-block rounded-full pt-[5px] hover:text-blue-500"><i
+                                                                class="fa fa-instagram"></i></a> <a href="#"
+                                                            class="w-8 h-8 inline-block rounded-full pt-[5px] hover:text-blue-500"><i
+                                                                class="fa fa-facebook"></i></a> <a href="#"
+                                                            class="w-8 h-8 inline-block rounded-full pt-[5px] hover:text-blue-500"><i
+                                                                class="fa fa-google"></i></a> <a href="#"
+                                                            class="w-8 h-8 inline-block rounded-full pt-[5px] hover:text-blue-500"><i
+                                                                class="fa fa-linkedin"></i></a> </div>
+                                                </div>
+                                          
+                                        <script src="https://cdn.tailwindcss.com"></script>
+                                        <script src="https://use.fontawesome.com/03f8a0ebd4.js"></script>
+
+
+                   <hr><br>                 
+     </section>   
+     
+
+
+<section>
+  <h5 class="paragraph1">Infix to Postfix/Prefix Converter</h5>
+    <div class="container">
+        <div class="form-group">
+            <label for="expression">Infix Expression:</label>
+            <input type="text" id="expression" placeholder="Enter infix expression">
+        </div>
+        <div class="form-group">
+            <label for="conversion">Select Conversion:</label>
+            <select id="conversion">
+                <option value="postfix">Postfix</option>
+                <option value="prefix">Prefix</option>
+            </select>
+        </div>
+        <div class="paragraph2">
+        <button onclick="convert()">Convert</button>
+      </div>
+        <div class="result">
+            <h3>Result:</h3>
+            <p id="convertedExpression"></p>
+        </div>
+    </div>
+  
+</section>
+
+
+
+
+<br><br><br><br><br>
+     <h3 style="text-align: center;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">by chetan</h3>
+     <!-- ---------------------footer------------------ -->
+
+     
+     <div class="footer">
+     <footer>
+      <p>Copyright &copy;MineConvert.com</p>
+    </footer>
+  </div>
+     
+
+
+     <script>
+      function convert() {
+          var expression = document.getElementById("expression").value;
+          var conversion = document.getElementById("conversion").value;
+          var convertedExpression = "";
+
+          // Perform the conversion logic here
+          // You can use JavaScript or any programming language of your choice
+
+          // Set the converted expression
+          document.getElementById("convertedExpression").textContent = convertedExpression;
+      }
+  </script>
+</body>
+</html>
