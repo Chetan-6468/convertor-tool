@@ -8,3 +8,7 @@ def convert_to_prefix(expression):
     # Implement the logic to convert infix to prefix here
     # Replace this placeholder code with your actual conversion logic
     return expression + ' (converted to prefix)'
+
+def convert_to_postfix(expression):
+    # Your implementation of converting infix to postfix here
+    pass
