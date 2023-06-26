@@ -16,7 +16,7 @@ MineConvert is a web application that allows you to convert infix expressions to
 
 ## Installation
 
-1. Clone the repository: git clone https://github.com/your-username/MineConvert.git
+1. Clone the repository: git clone https://github.com/Chetan-6468/convertor-tool.git
 2. Navigate to the project directory: cd MineConvert
 3. Install the dependencies: pip install -r requirements.txt
 4. Start the application: python manage.py runserver
